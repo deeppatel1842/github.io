@@ -3,13 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Patel | AI/ML Engineer</title>
+    <title>Deep Patel | AI Engineer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2A2A2A;
+            --accent: #00C897;
+        }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+        }
+        .hero {
+            background: linear-gradient(45deg, var(--primary), #1A1A1A);
+            color: white;
+            padding: 120px 0;
+        }
+        .project-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+        }
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .skill-badge {
+            background: var(--accent);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            margin: 5px;
+            display: inline-block;
+        }
+        .section-title {
+            color: var(--primary);
+            border-bottom: 3px solid var(--accent);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Deep Patel</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -26,15 +63,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero bg-primary text-light py-5">
-        <div class="container text-center">
-            <h1>Deep Patel</h1>
-            <p class="lead">AI/ML Engineer | NLP & Generative AI Specialist</p>
-            <p>Building intelligent systems with LLMs, RAG, and MLOps pipelines.</p>
+    <section class="hero text-center">
+        <div class="container">
+            <h1 class="display-4 mb-3">Deep Patel</h1>
+            <p class="lead">AI/ML Engineer | NLP & LLM Specialist</p>
             <div class="mt-4">
-                <a href="https://github.com/yourusername" class="btn btn-light me-2">GitHub</a>
-                <a href="https://linkedin.com/in/yourusername" class="btn btn-light me-2">LinkedIn</a>
-                <a href="resume.pdf" class="btn btn-light">Resume</a>
+                <a href="https://github.com/deeppatel1842" class="btn btn-light btn-lg mx-2">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com" class="btn btn-light btn-lg mx-2">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
             </div>
         </div>
     </section>
@@ -42,15 +81,19 @@
     <!-- Projects -->
     <section id="projects" class="py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Projects</h2>
+            <h2 class="section-title mb-5">Featured Projects</h2>
             <div class="row">
-                <!-- EcoAssist -->
+                <!-- Project 1 -->
                 <div class="col-md-4 mb-4">
-                    <div class="card h-100">
+                    <div class="card project-card h-100">
                         <div class="card-body">
-                            <h5 class="card-title">EcoAssist</h5>
-                            <p class="card-text">RAG-powered chatbot for e-commerce. Built with Llama-2, FAISS, and AWS Lambda.</p>
-                            <a href="#" class="btn btn-primary">Demo</a>
+                            <h5 class="card-title">🚀 EcoAssist</h5>
+                            <p class="card-text">RAG-powered e-commerce chatbot using Llama-2 and FAISS.</p>
+                            <div class="mb-3">
+                                <span class="badge bg-primary">LLM</span>
+                                <span class="badge bg-success">AWS</span>
+                            </div>
+                            <a href="#" class="btn btn-accent">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -62,16 +105,13 @@
     <!-- Skills -->
     <section id="skills" class="bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Skills</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Generative AI</h5>
-                    <ul>
-                        <li>LLM Fine-Tuning</li>
-                        <li>RAG Architectures</li>
-                    </ul>
-                </div>
-                <!-- Add other skills -->
+            <h2 class="section-title mb-5">Technical Arsenal</h2>
+            <div class="text-center">
+                <span class="skill-badge">LLM Fine-Tuning</span>
+                <span class="skill-badge">PyTorch</span>
+                <span class="skill-badge">RAG Architectures</span>
+                <span class="skill-badge">AWS Lambda</span>
+                <!-- Add more skills -->
             </div>
         </div>
     </section>
@@ -79,8 +119,18 @@
     <!-- Contact -->
     <section id="contact" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Get in Touch</h2>
-            <p>📧 Deep.Patel-1@ou.edu<br>📱 (+1) 425-305-1382</p>
+            <h2 class="section-title mb-4">Let's Connect</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <p><i class="fas fa-envelope me-2"></i>Deep.Patel-1@ou.edu</p>
+                            <p><i class="fas fa-phone me-2"></i>+1 (425) 305-1382</p>
+                            <p><i class="fas fa-map-marker me-2"></i>Norman, OK, USA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
